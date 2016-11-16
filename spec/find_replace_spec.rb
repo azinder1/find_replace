@@ -5,9 +5,17 @@ require('find_replace')
 Capybara.app = Sinatra::Application
 set(:show_exceptions, false)
 
-# describe('the find and replace path') do
-#
-# end
+describe('the find and replace path', {:type => :feature}) do
+  it("processes the user inputs and returns a newly curated sentence") do
+    visit('/')
+      fill_in('user-string', :with => "Hello world")
+      fill_in('find-term', :with => "Hello")
+      fill_in('replace-term', :with => "Yo")
+      click_button('Check it out!')
+    expect(page).to have_content("Yo world")
+  end
+
+end
 
 describe('String#find_replace') do
   # it ('takes an input and converts it to an array') do

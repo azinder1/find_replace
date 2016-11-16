@@ -1,0 +1,10 @@
+.btn {
+  background-color: #79589F;
+  color: white;
+}
+#sentence_label {
+  width:400px;
+}
+input {
+  float:right;
+}

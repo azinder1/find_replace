@@ -1,9 +1,8 @@
 .btn {
   background-color: #79589F;
 }
-body {
-  color: red;
-}
-img {
+img{
   display: block;
-}
+  margin-left: auto;
+  margin-right: auto
+ }
